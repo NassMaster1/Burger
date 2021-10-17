@@ -43,6 +43,8 @@ public class Burger implements FoodProduct {
       buffer.append(String.format("Calorie:         %.0f\n", calorie()));
 
       return buffer.toString();
+
+
      }
 
 
