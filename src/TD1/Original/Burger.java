@@ -30,7 +30,8 @@ public class Burger implements FoodProduct {
 
     @Override
     public double calorie() {
-        return (this.calorie_par_100g()*this.wight())/100;
+
+        return liste_product.stream().map(Food ::calorie_par_100g).reduce(0.0,Double::sum);
     }
 
   public String toString(){
